@@ -1,0 +1,12 @@
+﻿@model DoinikSokal.ViewModels.BannerViewModel
+
+<div class="bannerPost-middle">
+    <div class="post-img">
+        <a href="@Url.Action("Details","Home", new {id = Model.Id})"><img class="img-responsive" src="@Url.Content("~/PostImages/"+Model.ImagePath)"></a>
+    </div>
+    <div class="post-content-middle">
+        <a href="@Url.Action("Details","Home", new {id = Model.Id})">
+            <h2>@Html.DisplayFor(model=> model.Title)</h2>
+        </a>
+    </div>
+</div>

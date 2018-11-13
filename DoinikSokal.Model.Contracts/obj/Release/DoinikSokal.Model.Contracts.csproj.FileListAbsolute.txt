@@ -1,0 +1,5 @@
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\bin\Release\DoinikSokal.Model.Contracts.dll
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\bin\Release\DoinikSokal.Model.Contracts.pdb
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\obj\Release\DoinikSokal.Model.Contracts.csprojResolveAssemblyReference.cache
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\obj\Release\DoinikSokal.Model.Contracts.dll
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\obj\Release\DoinikSokal.Model.Contracts.pdb

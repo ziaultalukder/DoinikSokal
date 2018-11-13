@@ -1,0 +1,129 @@
+﻿@model DoinikSokal.ViewModels.PostViewModel
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+<script src="//cdn.ckeditor.com/4.10.0/full/ckeditor.js"></script>
+<h2>Create</h2>
+
+@using (Html.BeginForm("Create","Post", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.CategoryId, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.DropDownList("CategoryId", null, "Select Category", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.CategoryId, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        @* image upload section start *@
+        <div class="form-group">
+            
+            <div class="col-md-10">
+                <div>
+                    <div>
+                        <label>Upload Image</label>
+                        <div id="imgPreview" class="thumbnail" style="display: block">
+                            <img src="" class="img-responsive" id="targetImg" alt="Post Images" style="height: 250px; width: 300px;"  />
+                            <div class="caption">
+                                <a href="#" onclick="ClearPreview()"><i class="glyphicon glyphicon-trash"></i></a>
+                                <span id="description"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <div class="btn btn-primary ">
+                        <div class="col-md-10">
+                            <input type="file" name="Image" id="fileUpload" accept=".png,.jpg,.jpeg,.gif,.tif" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        @* image upload section end *@
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new {@class = "control-label col-md-2"})
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description, new { @class = "ckeditor" })
+                @Html.ValidationMessageFor(model => model.Description, "", new {@class = "text-danger"})
+            </div>
+        </div>
+
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.Tags, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Tags, new { htmlAttributes =  new { @class = "form-control demo-default" } })
+                
+            </div>
+        </div>
+        
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+@section Scripts
+{
+    <script type="text/javascript">
+        $(document).ready(function () {
+            debugger;
+            $("#fileUpload").change(function () {
+                debugger;
+                var file = this.files;
+
+                if (file && file[0]) {
+                    ReadImage(file[0]);
+                }
+            });
+        });
+        var ReadImage = function (file) {
+            debugger;
+            var reader = new FileReader;
+            var image = new Image;
+
+            reader.readAsDataURL(file);
+            reader.onload = function (_file) {
+                image.src = _file.target.result;
+                image.onload = function () {
+                    var height = this.height;
+                    var width = this.width;
+                    var type = file.type;
+                    var size = ~~(file.size / 1024) + "KB";
+
+                    $("#targetImg").attr('src', _file.target.result);
+                    $("#description").text("Size:" + size + ", " + height + "X " + width + ", " + type + "");
+                    $("#imgPreview").show();
+                };
+            };
+        };
+        var ClearPreview = function () {
+            debugger;
+            $("#fileUpload").val('');
+            $("#description").text('');
+            $("#imgPreview").hide();
+        };
+</script>
+}

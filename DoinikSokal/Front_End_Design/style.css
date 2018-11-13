@@ -1,0 +1,1037 @@
+/*! HTML5 Boilerplate v6.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * Vendor-prefixed and regular ::selection selectors cannot be combined:
+ * https://stackoverflow.com/a/16982510/7133471
+ *
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.slicknav_menu{display:none}
+
+/*navigation*/
+
+.navbar-default .navbar-nav > li > a:hover{
+    color: white;
+    background-color: red;
+}
+.navbar-default .navbar-nav > li > a {
+    color: #000;
+    font-size: 15px;
+}
+.container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+    margin-right: 0;
+    margin-left: 0;
+    margin: 0px;
+    padding: 0px;
+}
+.navbar-default {
+    border-color: #e7e7e7;
+    border-bottom: 1px solid;
+}
+.navbar {
+     border-radius: 0px; 
+}
+.nav ul li a:hover{color: #767676;}
+
+/*navigation*/
+/*logo*/
+
+.logo-section {
+    background-color: #ddd;
+    height: 120px;
+}
+.logo-body{}
+.logo-body img{margin-top: 22px;}
+.advertiesment-section{}
+.advertiesment-section img{margin-top: 22px;}
+/*logo*/
+
+
+.margin-top{margin-top: 15px;}
+
+/*header start*/
+.header-top{
+    height: 30px;
+    background-color: #000000;
+}
+.heder-top-left{
+    margin-top: 5px;
+}
+.heder-top-left i{
+    color: #fff;
+    margin-right: 10px;
+}
+.heder-top-left i:hover{
+    color: #5AE76E;
+}
+.social-icon{
+    margin-top: 5px;
+}
+
+.social-icon i{
+    color: #fff;
+    margin-left: 10px;
+}
+.social-icon i:hover{
+    color: #5AE76E;
+}
+
+/*header end*/
+
+
+/*header middle*/
+.header-middle{height: 100px; background-color: #2F3630;}
+/*header middle*/
+
+/*banner Post Css start*/
+.bannerPost{
+    height: 400px;
+    width: 385px;
+}
+
+
+
+.bannerPost-right{margin-left: -14px;}
+.post-img{ height: 324px; position: relative; overflow: hidden; }
+.post-img-left{ 
+    height: 162px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 1px;
+ }
+
+.post-img-left img{ height: 100%; width: 100%; transition: 0.50s;}
+.post-img img{ height: 100%; width: 100%; transition: 0.50s;}
+.post-img:hover img{transform: scale(1.2); background-color: rgba(0,0,0,0.4);}
+.post-img img::before{
+    background-color: rgba(0,0,0,0.4);
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.post-img:hover img::after{
+    background-color: rgba(0,0,0,0.4);
+    content: " ";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+.post-content-middle { position: absolute; top: 230px; background-color: rgba(0,0,0,0.5); width: 556px;height: 94px;}
+.post-img-left-content a{text-decoration: none;}
+.post-img-left-content h2{
+    text-align: justify;
+    font-size: 16px;
+    font-family: lat;
+    color: #000;
+    font-weight: bold;
+}
+.post-img-left-content h2:hover{color: red;}
+.post-img-left-content p{
+    text-align: justify;
+    font-family: lat;
+}
+
+
+.post-content-middle a{
+    text-decoration: none;
+    color: white;
+    text-align: justify;
+}
+.post-content-middle span{
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    font-family: Robotto;
+    font-weight: bold;
+}
+.post-content-middle h2{
+    font-size: 25px;
+    text-align: justify;
+    padding: 5px;
+    font-family: robott;
+    font-weight: bolder;
+}
+.post-content-middle i{
+    color: white;
+    padding: 5px;
+}
+
+.post-content span {
+    color: #fff;
+    float: right;
+    margin-right: 10px;
+    font-family: Robotto;
+    font-weight: bold;
+}
+.post-content{
+    position: absolute;
+    top: 315px;
+    background-color: rgba(0,0,0,0.6);
+    height: 84px;
+    width: 276px;
+}
+.post-content a{
+    text-decoration: none;
+    color: white;
+    text-align: justify;
+}
+.post-content h2 {
+    font-size: 20px;
+    text-align: justify;
+    padding: 5px;
+    font-family: robott;
+}
+.post-content i{
+    color: white;
+    padding: 5px;
+}
+
+
+/*banner Post Css end*/
+/*life Style css start*/
+
+.lifeStyle{}
+.lifeStyle h4 {
+    margin: 0px;
+    font-family: Poppins;
+    font-size: 18px;
+    color: #000;
+}
+
+.h6, h6 {
+    font-size: 12px;
+    color: red;
+}
+
+.postcontext-section h3{font-family:Poppins; font-size:25px;}
+.postcontext-section h3:hover{color:red;}
+.postcontext-section p{
+    font-family: robotto;
+    font-size: 17px;
+
+}
+
+.postimg-section{}
+.postimg-section{    
+    width: 230px;
+    height: 130px;
+}
+.postimg-section img{width: 100%; height: 100%;}
+
+
+
+.postcontext-section{}
+.postcontext-section a{text-decoration: none;   font-family: Poppins; color: #000000}
+.postcontext-section h3{
+    margin: 0px;
+    padding: 0px;
+    margin-bottom: 5px;
+    font-size: 20px;
+    text-align: justify;
+    font-family: Poppins;
+}
+.postcontext-section p{}
+/*life style css end*/
+.postDetailsImg {
+    width: 100%;
+    height: 100%;
+}
+.postDetailsImg img {
+    width: 100%;
+    height: 100%;
+}
+/*post roght start*/
+.facebook-feed{}
+.facebook-feed p{
+    font-style: italic;
+    color: #449D44;
+}
+.facebook-feed a{margin-left: 10px;}
+.facebook-feed i{
+    color: #fff;
+    font-size: 16px;
+    border: 1px solid;
+    width: 19px;
+    text-align: center;
+    height: 19px;
+    background-color: #3B5998;
+}
+.feed-data{
+    margin-left: 8px;
+    color: #FF89D4;
+}
+/*post roght end*/
+
+/*Social Media Start*/
+
+.social-media{padding: 0px; text-align: center;}
+.social-media ul{margin: 0px; padding: 0px; display: inline-block;}
+.social-media ul li {
+    list-style: none outside none;
+    display: inline-block;
+    margin: 5px;
+}
+.social-media ul li a {
+    display: inline-block;
+    position: relative;
+    width: 70px;
+    height: 70px;
+    color: #FFE;
+    background-color: #909AA0;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    text-decoration: none;
+    padding-top: 14px;
+}
+.social-media ul li a i {
+    font-size: 20px;
+    text-align: center;
+    margin-left: 0px;
+}
+.social-media ul li a span {
+    display: block;
+    font-size: 16px;
+    top: -10px;
+    left: -5px;
+    right: 0px;
+}
+.social-media ul li a.facebook{background-color: #3b5998;}
+.social-media ul li a.youtube{background-color: #FB3333;}
+.social-media ul li a.google-plus{background-color: #DD4F43;}
+.social-media ul li a.twitter{background-color: #1DA1F2;}
+/*Social Media End*/
+
+/*Life Style Popular Post Start*/
+.lifeStylePopularPost-section h5{
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    border: 1px solid;
+    height: 30px;
+    width: 95px;
+    padding: 6px;
+    background-color: red;
+    color: #fff;
+}
+.PopularPostImage {
+    width: 115px;
+    height: 87px;
+}
+
+.PopularPostImage img{
+    width: 100%;
+    height: 100%;
+}
+.PopularPostContent{}
+.PopularPostContent h3 {
+    margin: 0px;
+    padding: 0px;
+    font-size: 12px;
+    font-family: Times New Roman;
+    color: #fff;
+    background-color: red;
+    width: 90px;
+    height: 16px;
+    padding: 1px;
+    text-align: center;
+    border-radius: 10px;
+}
+.PopularPostContent a{text-decoration: none;}
+.PopularPostContent a p {
+    color: #000;
+    margin-top: 5px;
+    font-size: 13px;
+    text-align: justify;
+}
+.PopularPostContent i{}
+/*Life Style Popular Post end*/
+/*internation post*/
+.IntPopulrPost-Img {
+    height: 80px;
+}
+.IntPopulrPost-Img img {
+    width: 100%;
+    height: 100%;
+}
+.IntPopulrPost-content{}
+.IntPopulrPost-content a{text-decoration: none;}
+.IntPopulrPost-content a h3:hover{color: red;}
+.IntPopulrPost-content a h3 {
+    margin: 0px;
+    padding: 0px;
+    color: #000;
+    font-size: 20px;
+    font-family: Poppins;
+}
+.IntPopulrPost-content h6 {
+    font-size: 12px;
+    font-family: lato;
+}
+.IntPopulrPost-content p {
+    font-size: 14px;
+    text-align: justify;
+    font-family: robotto;
+}
+.IntPopulrPost-content p a{}
+/*internation Post*/
+/*advertiesment*/
+.advertiesmentImage {
+    margin: 25px;
+    overflow: hidden;
+}
+
+.advertiesmentImage img{}
+/*advertiesment*/
+/*all  post*/
+h5{
+    margin: 0px;
+    padding: 0px;
+    font-size: 25px;
+    font-family: Poppins;
+    font-weight: bold;
+}
+
+.pstImg{
+    width: 263px;
+    height: 164px;
+}
+
+.pstImg img{
+    height: 100%;
+    width: 100%;
+}
+
+.postContnt{}
+.postContnt i{margin-top: 5px;}
+.postContnt a{text-decoration: none;}
+.postContnt a h3:hover{color: red;}
+.postContnt a h3{
+    margin-top: 8px;
+    text-align: justify;
+    font-size: 18px;
+    color: #000;
+    font-family: Poppins;
+}
+.postContnt p{
+    font-size: 14px;
+    font-family: lato;
+    text-align: justify;
+}
+/*all Post*/
+
+
+/*multiple post*/
+.technology-image {
+    width: 360px;
+    height: 238px;
+}
+.technology-image img{width: 100%; height: 100%;}
+
+.technology-content{}
+.technology-content i{margin-top: 10px;}
+.technology-content a{text-decoration: none;}
+.technology-content a h3:hover{color: red;}
+.technology-content a h3 {
+    color: #000;
+    font-size: 20px;
+    text-align: justify;
+    font-family: Poppins;
+}
+.technology-content h6{}
+.technology-content p {
+    text-align: justify;
+    font-family: lato;
+    font-size: 15px;
+}
+/*Multiple post*/
+
+
+/*video screen*/
+.videoScreen{}
+.videoScreen iframe{}
+.videoScreen-content a{text-decoration: none;}
+.videoScreen-content a h3{
+    color: #000;
+    font-size: 20px;
+    text-align: justify;
+    font-family: lato;
+}
+.videoScreen-content h6{}
+
+/*video screen*/
+
+/*footer*/
+.footer-img li {
+    color: #fff;
+    text-align: justify;
+    font-size: 16px;
+    font-family: lato;
+}
+.footer-top {
+    background-color: #777777;
+    padding: 50px 0 20px;
+    color: #fff;
+}
+.footer-catagory h2 {
+    margin: 0px;
+    font-family: Poppins;
+    padding: 0px calc;
+    border-bottom: 1px solid;
+}
+.footer-catagory li {
+    list-style: none;
+    padding: 5px;
+    border-bottom: 1px solid #9a9a99;
+    margin-top: 10px;
+}
+.footer-catagory li:last-child{border-bottom: 0px solid #9a9a99;}
+.footer-catagory li a {
+    color: #fff;
+    font-size: 16px;
+    font-family: lato;
+}
+.newsletter h2{
+    margin: 0px;
+    font-family: Poppins;
+    padding: 0px calc;
+    border-bottom: 1px solid;
+}
+
+.newsletter p {
+    text-align: justify;
+    margin-top: 10px;
+    font-size: 16px;
+    font-family: lato;
+}
+
+
+.footer-menu{
+   width: 100%;
+   background-color: #535353;
+   color: white;
+   text-align: center;
+}
+.theme{}
+.theme p{padding: 15px;}
+.footer-social-icon i{}
+/*footer*/
+
+/*megamenu*/
+.navbar-nav > li > .dropdown-menu {}
+.megamenu{}
+.submenu{}
+.submenu h3{
+        font-size: 30px;
+    font-family: lat;
+    margin-left: 7px;
+    font-weight: bold;
+}
+.submenu li {
+    
+}
+.submenu li a {
+    font-size: 20px;
+
+    font-family: lat;
+    padding: 0px;
+    display: block;
+    padding: 6px;
+}
+.submenu li a:hover{
+    color: #000;
+    background-color: ##bdc3c7;
+}
+/*megamenu*/
+
+/*search box*/
+.inputcls {
+    overflow: hidden;
+    width: 256px;
+    height: 34px;
+    /* border: none; */
+    background: q;
+    margin-top: -43px;
+    margin-right: 15px;
+}
+.frm{}
+.btncls {
+    float: right;
+    margin-top: -41px;
+    border: none;
+    background-color: transparent;
+    margin-right: 10px;
+}
+.btncls:hover{
+    background-color: transparent !important;
+}
+
+
+
+/*fahion page css start*/
+.Catagory-Title{}
+.Catagory-Title h1{
+    margin: 0px;
+    padding: 0px;
+    font-family: Poppins;
+}
+.Catagory-Title i{
+    margin-top: 10px;
+    font-size: 20px;
+    color: red;
+}
+
+
+/*fashion page css end*/
+
+
+/*postDetails*/
+.socialMediaShare{}
+.socialMediaShare ul {
+    margin: 0px;
+    padding: 0;
+    display: inline-block;
+}
+.socialMediaShare ul li {
+    display: inline-block;
+    list-style: none outside none;
+    margin: 3px 0px;
+}
+.socialMediaShare ul li a{
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    height: 40px;
+    width: 60px;
+    color: #fff;
+    font-size: 14px;
+    text-align: center;
+    padding: 6px;
+}
+.socialMediaShare ul li a.facebook{background-color: #3b5998;}
+.socialMediaShare ul li a.twitter{background-color: #1DA1F2;}
+.socialMediaShare ul li a.youtube{background-color: #FB3333;}
+.socialMediaShare ul li a.google{background-color: #DD4F43;}
+
+.socialMediaShare ul li a i {
+    font-size: 30px;
+    text-align: center;
+}
+.socialMediaShare ul li p{
+    font-family: Lato;
+    font-size: 30px;
+    margin: 0px;
+    margin-right: 20px;
+    border: 1px solid;
+    width: 160px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    color: #fff;
+    height: 40px;
+}
+
+.postDetailsContent{}
+.postDetailsContent h2{
+    font-size: 35px;
+    text-align: justify;
+    font-family: Poppins;
+    font-weight: bold;
+}
+.postDetailsContent p{
+    font-size: 20px;
+    text-align: justify;
+    font-family: times new roman;
+}
+/*postDetails*/
+
+
+
+
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/*
+ * Hide visually and from screen readers
+ */
+
+.hidden {
+    display: none !important;
+}
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ *
+ * 1. For long content, line feeds are not interpreted as spaces and small width
+ *    causes content to wrap 1 word per line:
+ *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    -webkit-clip-path: inset(50%);
+    clip-path: inset(50%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+    white-space: nowrap; /* 1 */
+}
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    -webkit-clip-path: none;
+    clip-path: none;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+    white-space: inherit;
+}
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   These examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+}
+
+@media print,
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 1.25dppx),
+       (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+}
+
+/* ==========================================================================
+   Print styles.
+   Inlined to avoid the additional HTTP request:
+   http://www.phpied.com/delay-loading-your-print-css/
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster:
+                                   http://www.sanbeiji.com/archives/953 */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre {
+        white-space: pre-wrap !important;
+    }
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    /*
+     * Printing Tables:
+     * http://css-discuss.incutio.com/wiki/Printing_Tables
+     */
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
+@media only screen and (max-width: 960px){
+    body {
+        max-width: 960px;
+    }
+    
+    .post-content-middle {
+        position: absolute;
+        top: 230px;
+        background-color: rgba(0,0,0,0.5);
+        width: 747px;
+    }
+    .IntPopulrPost-Img {
+       height: 100%;
+    }
+    .logo-section {
+        background-color: #ddd;
+        height: 120px;
+        position: relative;
+    }
+    .advertiesment-section {
+        width: 595px;
+        position: absolute;
+        top: -75px;
+        right: -9px;
+    }
+    .logo-body img {
+        margin-top: 37px;
+        width: 120px;
+    }
+
+    .thumbnail {
+        display: block;
+        padding: 7px;
+        margin-bottom: 20px;
+        line-height: 1.42857143;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        -webkit-transition: border .2s ease-in-out;
+        -o-transition: border .2s ease-in-out;
+        transition: border .2s ease-in-out;
+        width: 347px;
+        float: left;
+        margin-left: 15px;
+    }
+    .pstImg {
+        width: 100%; 
+        height: 100%;
+    }
+    .PopularPostContent {
+        margin-right: 240px;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        width: 768px;
+    }
+}
+@media only screen and (max-width: 321px) {
+    body {
+        
+    }
+    .header-top{display: none;}
+    .logo-section {
+        background-color: #ddd;
+        height: 88px;
+    }
+    .logo-body{}
+    .logo-body img{width: 150px; margin-top: 15px;}
+    .advertiesment-section{
+        display: none;
+    }
+    .advertiesment-section img{}
+    .post-content {width: 301px}
+    .post-content-middle{width: 310px;}
+    .post-content-middle h2{font-size: 20px}    
+    .social-media ul li a { width: 67px; margin-left: -8px; }
+    .PopularPostContent h3{margin-top: 10px;}
+    .technology-image { width: 290px; }
+
+    .footer-img li {list-style: none;}
+    .footer-catagory h2{margin-top: 15px}
+	.pstImg {
+		width: 100%;
+	}
+    .inputcls {
+        float: left;
+        width: 220px;
+        margin-right: -147px;
+    }
+    .btncls {
+        float: left;
+        margin-left: 186px;
+    }
+    .IntPopulrPost-Img {
+        height: 100%;
+    }
+    .navbar-nav > li > .dropdown-menu { }
+    .megamenu { }
+    .megamenu{}
+    .submenu{}
+    .submenu li { }
+    .submenu li a { }
+    .submenu li a:hover{}
+}
+
+
+
+
+@media only screen and (max-width: 400px) {
+    body {
+        
+    }
+}

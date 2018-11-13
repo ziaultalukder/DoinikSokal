@@ -1,0 +1,33 @@
+﻿@model DoinikSokal.ViewModels.PostViewModel
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutEntertainment.cshtml";
+}
+
+<section>
+    <div class="container">
+        <hr />
+        <div class="row">
+            @foreach (var item in Model.BannerBottomViewModels)
+            {
+
+                <div class="col-md-3">
+                    <div class="pstImg">
+                        <a href="@Url.Action("Details","Entertainment", new {id = item.Id})"><img src="@Url.Content("~/PostImages/" + item.ImagePath)" class="img-responsive" alt="Popular Post Image"></a>
+                    </div>
+                    <div class="postContnt">
+                        <i class="fa fa-calendar pull-left"> @Html.DisplayFor(model => item.PostDate)</i>
+                        <br>
+                        <a href="@Url.Action("Details","Entertainment", new {id = item.Id})">
+                            <h3>@Html.DisplayFor(model => item.Title)</h3></a>
+                        <p>
+                            @Html.Raw(item.Description.Length > 100 ? item.Description.Substring(0, 100) : item.Description)
+                        </p>
+                    </div>
+                </div>
+            }
+        </div>
+        <hr />
+    </div>
+</section>

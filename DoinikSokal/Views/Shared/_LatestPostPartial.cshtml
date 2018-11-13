@@ -1,0 +1,23 @@
+﻿@model IEnumerable<DoinikSokal.ViewModels.LatestPostViewModel>
+@foreach (var item in Model)
+{
+    <div class="row">
+        <div class="col-md-4">
+            <div class="postimg-section">
+                <a href="@Url.Action("Details","Home", new {id = item.Id})"><img src="@Url.Content("~/PostImages/" + item.ImagePath)" alt="" class="img-responsive"/></a>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="postcontext-section ">
+                <a href="@Url.Action("Details","Home", new {id = item.Id})">
+                    <h3>@Html.DisplayFor(model => item.Title)</h3>
+                </a>
+                <p>
+                    @Html.Raw(item.Description.Length > 100 ? item.Description.Substring(0, 100) : item.Description)
+                </p>
+            </div>
+        </div>
+    </div>
+    <br/>
+}
+

@@ -1,0 +1,4 @@
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\bin\Debug\DoinikSokal.Model.Contracts.dll
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\bin\Debug\DoinikSokal.Model.Contracts.pdb
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\obj\Debug\DoinikSokal.Model.Contracts.dll
+C:\Users\Ziaul\Documents\Visual Studio 2015\Projects\DoinikSokal\DoinikSokal.Model.Contracts\obj\Debug\DoinikSokal.Model.Contracts.pdb

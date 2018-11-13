@@ -1,0 +1,24 @@
+﻿@model DoinikSokal.ViewModels.DetailsPostViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <img src="@Url.Content("~/PostImages/" + Model.ImagePath)" style="height: 500px; width: 100%;"/>
+            <br/>
+            <span class="post_short_Descrip">Category : @Html.DisplayFor(model => model.Category.Name) </span> -> <span class="post_short_Descrip"> User Name : @Html.DisplayFor(model => model.UserName)</span> -> <span class="post_short_Descrip">Date and Time : @Html.DisplayFor(model => model.PostDate)</span> 
+            <h2 class="post_title">@Html.DisplayFor(model => model.Title)</h2>
+            <p class="post_description">@Html.Raw(Model.Description)</p>
+            <span>Tags : @Html.DisplayFor(model => model.Tags)</span>
+        </div>
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

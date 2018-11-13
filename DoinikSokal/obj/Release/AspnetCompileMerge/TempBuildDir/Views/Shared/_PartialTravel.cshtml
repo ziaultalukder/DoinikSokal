@@ -1,0 +1,14 @@
+﻿@model DoinikSokal.ViewModels.TravelViewModel
+    
+<div class="technology-image">
+    <a href="@Url.Action("Details","Home", new {id = Model.Id})"><img src="@Url.Content("~/PostImages/"+ Model.ImagePath)" class="img-responsive"></a>
+</div>
+<div class="technology-content">
+    <i class="fa fa-calendar pull-left">@Html.DisplayFor(model => model.PostDate)</i>
+    <br>
+    <a href="@Url.Action("Details","Home", new {id = Model.Id})"><h3>@Html.DisplayFor(model => model.Title)</h3></a>
+
+    <p>
+        @Html.Raw(Model.Description.Length > 80 ? Model.Description.Substring(0, 80) : Model.Description)
+    </p>
+</div>

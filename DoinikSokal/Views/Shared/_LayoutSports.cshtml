@@ -1,0 +1,350 @@
+﻿@model DoinikSokal.ViewModels.PostViewModel
+<!doctype html>
+<html class="no-js" lang="">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="manifest" href="site.webmanifest">
+    <link rel="apple-touch-icon" href="icon.png">
+
+    <link rel="stylesheet" href="~/Front_End_Design/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/Front_End_Design/css/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Front_End_Design/css/slicknav.css">
+    <link rel="stylesheet" href="~/Front_End_Design/css/normalize.css">
+    <link rel="stylesheet" href="~/Front_End_Design/style.css">
+    <script src="~/Front_End_Design/js/vendor/modernizr-3.5.0.min.js"></script>
+</head>
+<body>
+
+    <!-- header-top section -->
+    <div class="header-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="heder-top-left pull-left">
+                        <i class="fa fa-map-marker">  Dhaka</i>
+                        <i class="fa fa-calendar">@DateTime.Now.ToString("f")</i>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icon pull-right">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-youtube"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- header-top section -->
+    <!-- logo section -->
+    <section>
+        <div class="logo-section">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="logo-body">
+                            <a href="@Url.Action("Index","Home")">
+                                <img src="~/Front_End_Design/img/Untitled-5.png" class="img-responsive" alt="Logo Image">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="advertiesment-section">
+                            <a href="#">
+                                <img src="~/Front_End_Design/img/Untitled-2 copy.jpg" class="img-responsive" alt="Advertiesment Image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- logo section -->
+
+
+    <section>
+        <nav class="navbar navbar-default">
+            <div class="container">
+                <div class="row">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div id="navbar" class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav ">
+                            <li class="active"><a href="@Url.Action("Index","Home")">Home</a></li>
+                            <li><a href="@Url.Action("Index","Technology")">Technology</a></li>
+                            <li><a href="@Url.Action("Index","Entertainment")">Entertainment</a></li>
+                            <li><a href="@Url.Action("Index", "Sports")">Sports</a></li>
+                            
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right">
+                            <div class="navbar-form navbar-left">
+                                @using (Html.BeginForm("Search", "Home", FormMethod.Get))
+                                {
+                                    <div class="form-group">
+                                        @Html.Editor("SearchString", null, new {htmlAttributes = new {@class = "form-control", placeholder = "Search"}})
+                                        <input type="submit" value="Search" class="btn btn-default">
+                                    </div>
+                                }
+                            </div>
+                        </ul>       
+                    </div>
+
+                </div>
+            </div>
+            <!--/.nav-collapse -->
+        </nav>
+    </section>
+
+<div>
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="bannerPost-middle">
+                        <div class="post-img">
+                            <a href="@Url.Action("Details","Sports", new {id = Model.BannerViewModel.Id})"><img class="img-responsive" src="@Url.Content("~/PostImages/"+Model.BannerViewModel.ImagePath)"></a>
+                        </div>
+                        <div class="post-content-middle">
+                            <a href="@Url.Action("Details","Sports", new {id = Model.BannerViewModel.Id})">
+                                <h2>@Html.DisplayFor(model=> model.BannerViewModel.Title)</h2></a>
+                        </div>
+                    </div>
+                    <br>
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        
+                            @foreach (var item in Model.SiteBannerViewModels)
+                            {
+                                <div class="col-md-6">
+                                    <div class="thumbnail" style="margin-left: 10px;">
+                                        <div class="bannerPost-left">
+                                            <div class="post-img-left">
+                                                <a href="@Url.Action("Details","Sports", new {id = item.Id})"><img class="img-responsive" src="@Url.Content("~/PostImages/" + item.ImagePath)"></a>
+                                            </div>
+                                            <div class="post-img-left-content">
+                                                <a href="@Url.Action("Details","Sports", new {id = item.Id})">
+                                                    <h2>@Html.DisplayFor(model => item.Title)</h2>
+                                                </a>
+                                                <p> @Html.Raw(item.Description.Length > 150 ? item.Description.Substring(0, 150) : item.Description) </p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            }
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    @RenderBody()
+</div>
+
+    <br>
+
+    <section>
+        <div class="lifeStyle">
+            <div class="container">
+                <div class="row">
+                    <!-- main left start -->
+                    <div class="col-md-8">
+                        <h4>All Spots News</h4>
+                        <hr>
+                        @foreach (var item in Model.LatestPostViewModels)
+                        {
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="postimg-section">
+                                        <a href="@Url.Action("Details","Sports", new {id = item.Id})"><img src="@Url.Content("~/PostImages/" + item.ImagePath)" alt="" class="img-responsive"/></a>
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="postcontext-section ">
+                                        <a href="@Url.Action("Details","Sports", new {id = item.Id})"> <h3>@Html.DisplayFor(model => item.Title)</h3></a>
+
+                                        <p>
+                                            @Html.Raw(item.Description.Length > 100 ? item.Description.Substring(0, 100) : item.Description)
+                                        </p>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                            <br>
+                        }
+                        
+                        
+                        
+
+                        <div class="advertiesment">
+                            <a href="#">
+                                <img src="~/Front_End_Design/img/Untitled-8 copy.jpg" class="img-responsive" alt="advertiesment Image" />
+                            </a>
+                        </div>
+                        <br>
+                    </div>
+                    <!-- main left end -->
+                    <div class="col-md-4">
+
+                        <div class="advertiesmentImage">
+                            <div class="">
+                                <a href="#">
+                                    <img src="~/Front_End_Design/img/Untitled-1 copy.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="advertiesmentImage">
+                            <div class="">
+                                <a href="#">
+                                    <img src="~/Front_End_Design/img/Untitled-1 copy.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+                        <div class="advertiesmentImage">
+                            <div class="">
+                                <a href="#">
+                                    <img src="~/Front_End_Design/img/Untitled-1 copy.jpg" class="img-responsive">
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+         </div>
+    </section>
+    <!-- Internation Post Start -->
+
+    <!-- video section start -->
+    <div class="jumbotron">
+        <div class="container">
+            <div class="col-md-4">
+                <div class="videoScreen">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+                    </div>
+                    <div class="videoScreen-content">
+                        <a href="#"><h3>Two Columns With Two Nested Columns.</h3></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="videoScreen">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe> -->
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/8xg3vE8Ie_E" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="videoScreen-content">
+                        <a href="#"><h3>Two Columns With Two Nested Columns.</h3></a>
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="videoScreen">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe> -->
+                        <iframe width="854" height="480" src="https://www.youtube.com/embed/60ItHLz5WEA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                    </div>
+                    <div class="videoScreen-content">
+                        <a href="#"><h3>Two Columns With Two Nested Columns.</h3></a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- video section End -->
+    <!--Footer-->
+    <footer>
+        <!-- <div class="jumbotron bg-secondary"> -->
+        <div class="footer-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="footer-img">
+                            <img src="~/Front_End_Design/img/Untitled-5.png" class="img-responsive" alt="Logo Image" /><br>
+                            <li>House-08, Shenpara Parbata, Mirpur-10, Dhaka-1216</li>
+                            <li>Phone : 01728388751</li>
+                            <li>Fax : 289927785</li>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-catagory">
+                            <h2>Catagory</h2>
+                            <li><a href="#">Newslatter</a></li>
+                            <li><a href="#">Pressroom</a></li>
+                            <li><a href="#">Advertiesment Online</a></li>
+                            <li><a href="#">Language</a></li>
+                            <li><a href="#">Beign Part</a></li>
+                        </div>
+
+                    </div>
+                    <div class="col-md-3">
+                        <div class="footer-catagory">
+                            <h2>Popular Menu</h2>
+                            <li><a href="#">Political</a></li>
+                            <li><a href="#">Life Style</a></li>
+                            <li><a href="#">Health</a></li>
+                            <li><a href="#">Language</a></li>
+                            <li><a href="#">Sport</a></li>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="newsletter">
+                            <h2>Sign For Newslatter</h2>
+                            <p>
+                                Sign up to our newsletter and get exclusive deals you will not find anywhere else straight to your inbox!
+                            </p>
+                            <form class="form-inline" action="">
+                                <div class="form-group">
+                                    <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
+                                </div>
+                                <button type="submit" class="btn btn-default">Submit</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+            </div>
+        </div>
+        <!-- </div> -->
+        <!-- footer-menu -->
+        <div class="footer-menu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="theme text-centre">
+                            <p>Copyright All right Reserved 2017</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer menu end -->
+    </footer>
+    <!--/.Footer-->
+
+    <script src="~/Front_End_Design/js/vendor/jquery-3.2.1.min.js"></script>
+    <script src="~/Front_End_Design/js/plugins.js"></script>
+    <script src="~/Front_End_Design/js/bootstrap.min.js"></script>
+    <script src="~/Front_End_Design/js/jquery.slicknav.min.js"></script>
+    <script src="~/Front_End_Design/js/jquery.fitvids.js"></script>
+    <script src="~/Front_End_Design/js/main.js"></script>
+
+</body>
+</html>

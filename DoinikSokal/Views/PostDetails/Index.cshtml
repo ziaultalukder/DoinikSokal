@@ -1,0 +1,15 @@
+﻿@model DoinikSokal.ViewModels.PostViewModel
+@{
+    
+    Layout = "~/Views/Shared/_LayoutPostDetails.cshtml";
+}
+
+<div class="postDetailsImg">
+    <img src="@Url.Content("~/PostImages/"+ Model.ImagePath)" class="img-responsive">
+</div>
+<div class="postDetailsContent">
+    <h2>@Html.DisplayFor(model => model.Title)</h2>
+    <p>
+        @Html.Raw(Model.Description)
+    </p>
+</div>

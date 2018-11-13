@@ -1,0 +1,24 @@
+﻿@model IEnumerable<DoinikSokal.ViewModels.PopularPostViewModel>
+    
+@foreach (var item in Model)
+{
+    <div class="row ">
+        <div class="col-md-4 ">
+            <div class="PopularPostImage pull-left">
+                <a href="@Url.Action("Details","Home", new {id = item.Id})">
+                    <img src="@Url.Content("~/PostImages/" + item.ImagePath)" class="img-responsive" alt="Popular Post Image">
+                </a>
+            </div>
+        </div>
+        <div class="col-md-8">
+            <div class="PopularPostContent">
+                <h3>@Html.DisplayFor(model => item.Category.Name)</h3>
+                <a href="@Url.Action("Details","Home", new {id = item.Id})">
+                    <p>@Html.DisplayFor(model => item.Title)</p>
+                </a>
+                <i class="fa fa-calendar pull-left"> @Html.DisplayFor(model => item.PostDate)</i>
+            </div>
+        </div>
+    </div>
+    <br/>
+}

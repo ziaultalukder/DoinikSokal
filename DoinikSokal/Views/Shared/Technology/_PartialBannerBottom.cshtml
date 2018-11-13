@@ -1,0 +1,20 @@
+﻿@model IEnumerable<DoinikSokal.ViewModels.BannerBottomViewModel>
+@foreach (var item in Model)
+{
+    <div class="col-md-3">
+        <div class="pstImg">
+            <a href="@Url.Action("Details","Technology", new {id=item.Id})"><img src="@Url.Content("~/PostImages/"+item.ImagePath)" class="img-responsive" alt="Popular Post Image"></a>
+        </div>
+        <div class="postContnt">
+            <i class="fa fa-calendar pull-left">@Html.DisplayFor(model => item.PostDate)</i>
+            <br>
+            <a href="@Url.Action("Details","Technology", new {id=item.Id})">
+                <h3>@Html.DisplayFor(model => item.Title)</h3>
+            </a>
+            <p>
+                @Html.Raw(item.Description.Length > 100 ? item.Description.Substring(0, 100) : item.Description)
+            </p>
+        </div>
+        <br>
+    </div>
+}

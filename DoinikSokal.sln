@@ -1,0 +1,58 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoinikSokal", "DoinikSokal\DoinikSokal.csproj", "{9936AB34-AE1B-4C3F-980C-BA8BBBEC3286}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoinikSokal.Models", "DoinikSokal.Models\DoinikSokal.Models.csproj", "{908026F7-179D-468A-A036-ECB42DAEFF03}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoinikSokal.BLL", "DoinikSokal.BLL\DoinikSokal.BLL.csproj", "{B1DF5E73-6DE4-4D48-A797-8F891AF4ABD8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoinikSokal.Repository", "DoinikSokal.Repository\DoinikSokal.Repository.csproj", "{3C26E4E9-3A5C-4704-AF64-24178AF7E1B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoinikSokal.Model.Contracts", "DoinikSokal.Model.Contracts\DoinikSokal.Model.Contracts.csproj", "{E22725BC-7718-4E7D-A285-EEC018A9DBD5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoinikSokal.Repository.Contracts", "DoinikSokal.Repository.Contracts\DoinikSokal.Repository.Contracts.csproj", "{E08A7C41-2292-491A-A35B-181BBF96009C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DoinikSokal.BLL.Contracts", "DoinikSokal.BLL.Contracts\DoinikSokal.BLL.Contracts.csproj", "{A37CBCA8-DFDF-46F0-9EBB-6DE3B19AAFB6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9936AB34-AE1B-4C3F-980C-BA8BBBEC3286}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9936AB34-AE1B-4C3F-980C-BA8BBBEC3286}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9936AB34-AE1B-4C3F-980C-BA8BBBEC3286}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9936AB34-AE1B-4C3F-980C-BA8BBBEC3286}.Release|Any CPU.Build.0 = Release|Any CPU
+		{908026F7-179D-468A-A036-ECB42DAEFF03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{908026F7-179D-468A-A036-ECB42DAEFF03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{908026F7-179D-468A-A036-ECB42DAEFF03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{908026F7-179D-468A-A036-ECB42DAEFF03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DF5E73-6DE4-4D48-A797-8F891AF4ABD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DF5E73-6DE4-4D48-A797-8F891AF4ABD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DF5E73-6DE4-4D48-A797-8F891AF4ABD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DF5E73-6DE4-4D48-A797-8F891AF4ABD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C26E4E9-3A5C-4704-AF64-24178AF7E1B5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C26E4E9-3A5C-4704-AF64-24178AF7E1B5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C26E4E9-3A5C-4704-AF64-24178AF7E1B5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C26E4E9-3A5C-4704-AF64-24178AF7E1B5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E22725BC-7718-4E7D-A285-EEC018A9DBD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E22725BC-7718-4E7D-A285-EEC018A9DBD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E22725BC-7718-4E7D-A285-EEC018A9DBD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E22725BC-7718-4E7D-A285-EEC018A9DBD5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E08A7C41-2292-491A-A35B-181BBF96009C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E08A7C41-2292-491A-A35B-181BBF96009C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E08A7C41-2292-491A-A35B-181BBF96009C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E08A7C41-2292-491A-A35B-181BBF96009C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A37CBCA8-DFDF-46F0-9EBB-6DE3B19AAFB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A37CBCA8-DFDF-46F0-9EBB-6DE3B19AAFB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A37CBCA8-DFDF-46F0-9EBB-6DE3B19AAFB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A37CBCA8-DFDF-46F0-9EBB-6DE3B19AAFB6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
